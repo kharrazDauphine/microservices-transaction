@@ -17,7 +17,12 @@ java -jar microservice-transaction.jar
 POST http://localhost:8001/transactions/
 ```
 ```
-json object
+{
+    "src": "xxx",
+    "dst": "xxx",
+    "montant": xxx,
+    "date": "yyyy-MM-dd"
+}
 ```
 
 ## Read a transaction
@@ -28,13 +33,18 @@ GET http://localhost:8001/transactions/{id}
 ```
 PUT http://localhost:8001/transactions/{id}
 ```
+{
+    "id": {id},
+    "src": "xxx",
+    "dst": "xxx",
+    "montant": xxx,
+    "date": "yyyy-MM-dd",
+    "taux": xxx
+}
 ```
 json object
 ```
 ## Delete a transaction
 ```
 DELETE http://localhost:8001/transactions/{id}
-```
-```
-json object
 ```
